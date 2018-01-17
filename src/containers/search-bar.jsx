@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React, { Fragment, Component } from 'react'
 // import PropTypes from 'prop-types'
 
-class SearchBar extends Component {
-    render() {
+class SearchBar extends Component { // eslint-disable-line
+    render() { // eslint-disable-line
         return (
-            <div>
+            <Fragment>
                 Search Bar
-            </div>
+            </Fragment>
         )
     }
 }
