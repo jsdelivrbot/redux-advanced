@@ -1,0 +1,12 @@
+import React, { Component } from 'react'
+import SearchBar from './containers/search-bar'
+
+export default class App extends Component { // eslint-disable-line
+    render() { // eslint-disable-line
+        return (
+            <div>
+                <SearchBar />
+            </div>
+        )
+    }
+}
