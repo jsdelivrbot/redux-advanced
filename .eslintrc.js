@@ -15,5 +15,8 @@ module.exports = {
     "plugins": [
         "react"
     ],
-    "extends": ["jhh-react"]
+    "extends": ["jhh-react"],
+    "globals": {
+        "process": true
+    }
 };

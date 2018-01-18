@@ -4,14 +4,25 @@
   "description": "Simple starter package for Redux with React and Babel support",
   "main": "index.jsx",
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "author": "",
+  "license": "ISC",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
     "lint": "eslint --ext .jsx --ext .js src/"
   },
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "babel-preset-stage-1": "^6.1.18",
+    "dotenv-webpack": "^1.5.4",
+    "lodash": "^4.17.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "5.0.6",
+    "react-router": "^4.2.0",
+    "redux": "^3.0.4",
+    "redux-promise": "^0.5.3"
+  },
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^7.1.2",
@@ -30,14 +41,5 @@
     "react-addons-test-utils": "^15.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.0"
-  },
-  "dependencies": {
-    "babel-preset-stage-1": "^6.1.18",
-    "lodash": "^4.17.4",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "5.0.6",
-    "react-router": "^4.2.0",
-    "redux": "^3.0.4"
   }
 }
