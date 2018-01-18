@@ -1,5 +1,10 @@
 import React, { Fragment, Component } from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { fetchWeather } from '../actions/'
+
+const { func } = PropTypes
 
 class SearchBar extends Component {
     constructor(props) {
@@ -15,9 +20,9 @@ class SearchBar extends Component {
         })
     }
 
-    handleFormSubmit(e) { // eslint-disable-line
+    handleFormSubmit(e) {
         e.preventDefault()
-        console.log(e) // eslint-disable-line
+        this.props.fetchWeather(this.state.term)
     }
 
     render() {
@@ -46,6 +51,11 @@ class SearchBar extends Component {
 }
 
 SearchBar.propTypes = {
+    fetchWeather: func.isRequired
 }
 
-export default SearchBar
+const mapDispatchToProps = dispatch => (
+    bindActionCreators({ fetchWeather }, dispatch)
+)
+
+export default connect(null, mapDispatchToProps)(SearchBar)

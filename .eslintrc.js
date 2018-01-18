@@ -17,6 +17,7 @@ module.exports = {
     ],
     "extends": ["jhh-react"],
     "globals": {
-        "process": true
+        "process": true,
+        "__dirname": true
     }
 };

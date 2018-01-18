@@ -13,6 +13,7 @@
     "lint": "eslint --ext .jsx --ext .js src/"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "babel-preset-stage-1": "^6.1.18",
     "dotenv-webpack": "^1.5.4",
     "lodash": "^4.17.4",
